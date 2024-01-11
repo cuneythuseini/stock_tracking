@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="stock_dbConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="stock_dbConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.stock_dbConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="total_sale_productTableAdapter" GeneratorDataComponentClassName="total_sale_productTableAdapter" Name="total_sale_product" UserDataComponentName="total_sale_productTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="stock_dbConnectionString (Web.config)" DbObjectName="stock_db.dbo.total_sale_product" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT product_name, total_qunatity, total_revenue FROM dbo.total_sale_product</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="product_name" DataSetColumn="product_name" />
+              <Mapping SourceColumn="total_qunatity" DataSetColumn="total_qunatity" />
+              <Mapping SourceColumn="total_revenue" DataSetColumn="total_revenue" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSet1" msprop:Generator_DataSetName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="total_sale_product" msprop:Generator_RowEvHandlerName="total_sale_productRowChangeEventHandler" msprop:Generator_RowDeletedName="total_sale_productRowDeleted" msprop:Generator_RowDeletingName="total_sale_productRowDeleting" msprop:Generator_RowEvArgName="total_sale_productRowChangeEvent" msprop:Generator_TablePropName="total_sale_product" msprop:Generator_RowChangedName="total_sale_productRowChanged" msprop:Generator_RowChangingName="total_sale_productRowChanging" msprop:Generator_TableClassName="total_sale_productDataTable" msprop:Generator_RowClassName="total_sale_productRow" msprop:Generator_TableVarName="tabletotal_sale_product" msprop:Generator_UserTableName="total_sale_product">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="product_name" msprop:Generator_ColumnPropNameInRow="product_name" msprop:Generator_ColumnPropNameInTable="product_nameColumn" msprop:Generator_ColumnVarNameInTable="columnproduct_name" msprop:Generator_UserColumnName="product_name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="total_qunatity" msprop:Generator_ColumnPropNameInRow="total_qunatity" msprop:Generator_ColumnPropNameInTable="total_qunatityColumn" msprop:Generator_ColumnVarNameInTable="columntotal_qunatity" msprop:Generator_UserColumnName="total_qunatity" type="xs:int" minOccurs="0" />
+              <xs:element name="total_revenue" msprop:Generator_ColumnPropNameInRow="total_revenue" msprop:Generator_ColumnPropNameInTable="total_revenueColumn" msprop:Generator_ColumnVarNameInTable="columntotal_revenue" msprop:Generator_UserColumnName="total_revenue" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

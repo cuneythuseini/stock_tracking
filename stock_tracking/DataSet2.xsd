@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet2" targetNamespace="http://tempuri.org/DataSet2.xsd" xmlns:mstns="http://tempuri.org/DataSet2.xsd" xmlns="http://tempuri.org/DataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="stock_dbConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="stock_dbConnectionString1 (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.stock_dbConnectionString1.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="total_sales_by_categoryTableAdapter" GeneratorDataComponentClassName="total_sales_by_categoryTableAdapter" Name="total_sales_by_category" UserDataComponentName="total_sales_by_categoryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="stock_dbConnectionString1 (Web.config)" DbObjectName="stock_db.dbo.total_sales_by_category" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT category_name, total_quantity, total_revenue FROM dbo.total_sales_by_category</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="category_name" DataSetColumn="category_name" />
+              <Mapping SourceColumn="total_quantity" DataSetColumn="total_quantity" />
+              <Mapping SourceColumn="total_revenue" DataSetColumn="total_revenue" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSet2" msprop:Generator_DataSetName="DataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="total_sales_by_category" msprop:Generator_RowEvHandlerName="total_sales_by_categoryRowChangeEventHandler" msprop:Generator_RowDeletedName="total_sales_by_categoryRowDeleted" msprop:Generator_RowDeletingName="total_sales_by_categoryRowDeleting" msprop:Generator_RowEvArgName="total_sales_by_categoryRowChangeEvent" msprop:Generator_TablePropName="total_sales_by_category" msprop:Generator_RowChangedName="total_sales_by_categoryRowChanged" msprop:Generator_RowChangingName="total_sales_by_categoryRowChanging" msprop:Generator_TableClassName="total_sales_by_categoryDataTable" msprop:Generator_RowClassName="total_sales_by_categoryRow" msprop:Generator_TableVarName="tabletotal_sales_by_category" msprop:Generator_UserTableName="total_sales_by_category">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="category_name" msprop:Generator_ColumnPropNameInRow="category_name" msprop:Generator_ColumnPropNameInTable="category_nameColumn" msprop:Generator_ColumnVarNameInTable="columncategory_name" msprop:Generator_UserColumnName="category_name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="total_quantity" msprop:Generator_ColumnPropNameInRow="total_quantity" msprop:Generator_ColumnPropNameInTable="total_quantityColumn" msprop:Generator_ColumnVarNameInTable="columntotal_quantity" msprop:Generator_UserColumnName="total_quantity" type="xs:int" minOccurs="0" />
+              <xs:element name="total_revenue" msprop:Generator_ColumnPropNameInRow="total_revenue" msprop:Generator_ColumnPropNameInTable="total_revenueColumn" msprop:Generator_ColumnVarNameInTable="columntotal_revenue" msprop:Generator_UserColumnName="total_revenue" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

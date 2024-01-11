@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet3" targetNamespace="http://tempuri.org/DataSet3.xsd" xmlns:mstns="http://tempuri.org/DataSet3.xsd" xmlns="http://tempuri.org/DataSet3.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="stock_dbConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="stock_dbConnectionString2 (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.stock_dbConnectionString2.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="monthly_sales_reportTableAdapter" GeneratorDataComponentClassName="monthly_sales_reportTableAdapter" Name="monthly_sales_report" UserDataComponentName="monthly_sales_reportTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="stock_dbConnectionString2 (Web.config)" DbObjectName="stock_db.dbo.monthly_sales_report" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT sale_year, sale_month, total_quantity, total_revenue FROM dbo.monthly_sales_report</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="sale_year" DataSetColumn="sale_year" />
+              <Mapping SourceColumn="sale_month" DataSetColumn="sale_month" />
+              <Mapping SourceColumn="total_quantity" DataSetColumn="total_quantity" />
+              <Mapping SourceColumn="total_revenue" DataSetColumn="total_revenue" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSet3" msprop:Generator_DataSetName="DataSet3">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="monthly_sales_report" msprop:Generator_RowEvHandlerName="monthly_sales_reportRowChangeEventHandler" msprop:Generator_RowDeletedName="monthly_sales_reportRowDeleted" msprop:Generator_RowDeletingName="monthly_sales_reportRowDeleting" msprop:Generator_RowEvArgName="monthly_sales_reportRowChangeEvent" msprop:Generator_TablePropName="monthly_sales_report" msprop:Generator_RowChangedName="monthly_sales_reportRowChanged" msprop:Generator_RowChangingName="monthly_sales_reportRowChanging" msprop:Generator_TableClassName="monthly_sales_reportDataTable" msprop:Generator_RowClassName="monthly_sales_reportRow" msprop:Generator_TableVarName="tablemonthly_sales_report" msprop:Generator_UserTableName="monthly_sales_report">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sale_year" msprop:Generator_ColumnPropNameInRow="sale_year" msprop:Generator_ColumnPropNameInTable="sale_yearColumn" msprop:Generator_ColumnVarNameInTable="columnsale_year" msprop:Generator_UserColumnName="sale_year" type="xs:int" minOccurs="0" />
+              <xs:element name="sale_month" msprop:Generator_ColumnPropNameInRow="sale_month" msprop:Generator_ColumnPropNameInTable="sale_monthColumn" msprop:Generator_ColumnVarNameInTable="columnsale_month" msprop:Generator_UserColumnName="sale_month" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="total_quantity" msprop:Generator_ColumnPropNameInRow="total_quantity" msprop:Generator_ColumnPropNameInTable="total_quantityColumn" msprop:Generator_ColumnVarNameInTable="columntotal_quantity" msprop:Generator_UserColumnName="total_quantity" type="xs:int" minOccurs="0" />
+              <xs:element name="total_revenue" msprop:Generator_ColumnPropNameInRow="total_revenue" msprop:Generator_ColumnPropNameInTable="total_revenueColumn" msprop:Generator_ColumnVarNameInTable="columntotal_revenue" msprop:Generator_UserColumnName="total_revenue" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet4" targetNamespace="http://tempuri.org/DataSet4.xsd" xmlns:mstns="http://tempuri.org/DataSet4.xsd" xmlns="http://tempuri.org/DataSet4.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="stock_dbConnectionString3" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="stock_dbConnectionString3 (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.stock_dbConnectionString3.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="annual_sales_summaryTableAdapter" GeneratorDataComponentClassName="annual_sales_summaryTableAdapter" Name="annual_sales_summary" UserDataComponentName="annual_sales_summaryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="stock_dbConnectionString3 (Web.config)" DbObjectName="stock_db.dbo.annual_sales_summary" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT sale_year, total_sales, total_quantity, total_revenue FROM dbo.annual_sales_summary</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="sale_year" DataSetColumn="sale_year" />
+              <Mapping SourceColumn="total_sales" DataSetColumn="total_sales" />
+              <Mapping SourceColumn="total_quantity" DataSetColumn="total_quantity" />
+              <Mapping SourceColumn="total_revenue" DataSetColumn="total_revenue" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet4" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSet4" msprop:Generator_DataSetName="DataSet4">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="annual_sales_summary" msprop:Generator_RowEvHandlerName="annual_sales_summaryRowChangeEventHandler" msprop:Generator_RowDeletedName="annual_sales_summaryRowDeleted" msprop:Generator_RowDeletingName="annual_sales_summaryRowDeleting" msprop:Generator_RowEvArgName="annual_sales_summaryRowChangeEvent" msprop:Generator_TablePropName="annual_sales_summary" msprop:Generator_RowChangedName="annual_sales_summaryRowChanged" msprop:Generator_RowChangingName="annual_sales_summaryRowChanging" msprop:Generator_TableClassName="annual_sales_summaryDataTable" msprop:Generator_RowClassName="annual_sales_summaryRow" msprop:Generator_TableVarName="tableannual_sales_summary" msprop:Generator_UserTableName="annual_sales_summary">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sale_year" msprop:Generator_ColumnPropNameInRow="sale_year" msprop:Generator_ColumnPropNameInTable="sale_yearColumn" msprop:Generator_ColumnVarNameInTable="columnsale_year" msprop:Generator_UserColumnName="sale_year" type="xs:int" minOccurs="0" />
+              <xs:element name="total_sales" msprop:Generator_ColumnPropNameInRow="total_sales" msprop:Generator_ColumnPropNameInTable="total_salesColumn" msprop:Generator_ColumnVarNameInTable="columntotal_sales" msprop:Generator_UserColumnName="total_sales" type="xs:int" minOccurs="0" />
+              <xs:element name="total_quantity" msprop:Generator_ColumnPropNameInRow="total_quantity" msprop:Generator_ColumnPropNameInTable="total_quantityColumn" msprop:Generator_ColumnVarNameInTable="columntotal_quantity" msprop:Generator_UserColumnName="total_quantity" type="xs:int" minOccurs="0" />
+              <xs:element name="total_revenue" msprop:Generator_ColumnPropNameInRow="total_revenue" msprop:Generator_ColumnPropNameInTable="total_revenueColumn" msprop:Generator_ColumnVarNameInTable="columntotal_revenue" msprop:Generator_UserColumnName="total_revenue" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
